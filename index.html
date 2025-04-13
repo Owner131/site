@@ -53,21 +53,27 @@
             box-sizing: border-box;
             font-size: 16px;
         }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
         .button, .whatsapp {
-            display: block;
-            width: 100%;
+            width: 80%;
             text-align: center;
             background-color: #27ae60;
             color: white;
             padding: 14px;
-            margin-top: 20px;
             border: none;
             border-radius: 12px;
             text-decoration: none;
             font-size: 16px;
             transition: background-color 0.3s;
+            cursor: pointer;
         }
-        .button:hover, .whatsapp:hover {
+        .button:hover {
             background-color: #219150;
         }
         .whatsapp {
@@ -105,15 +111,4 @@
         <input type="tel" placeholder="+7 777 123 4567">
 
         <h2>Оплата:</h2>
-        <p><strong>Kaspi перевод на номер: +7 777 986 40 76</strong></p>
-        <a class="button" onclick="navigator.clipboard.writeText('+7 777 986 40 76')">Скопировать номер Kaspi</a>
-
-        <h2>После оплаты:</h2>
-        <a class="whatsapp" href="https://wa.me/77779864076" target="_blank">Подтвердить оплату в WhatsApp</a>
-
-        <div class="footer">
-            © 2025 Kidilo. Все права защищены.
-        </div>
-    </div>
-</body>
-</html>
+        <p><strong>Kaspi Gold на имя Аслан С. — +7 777 986 40
