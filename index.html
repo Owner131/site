@@ -119,15 +119,3 @@ full_html_content = """
     </div>
 </body>
 </html>
-"""
-
-# Сохраняем обновлённый HTML
-html_file = Path("/mnt/data/kidilo_site/index.html")
-html_file.write_text(full_html_content, encoding='utf-8')
-
-# Создаём обновлённый архив
-zip_path = "/mnt/data/kidilo_site_full.zip"
-with zipfile.ZipFile(zip_path, 'w') as zipf:
-    zipf.write(html_file, arcname="index.html")
-
-zip_path
