@@ -5,50 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kidilo — Предзаказ премиальной коляски</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #b2ebf2, #e0f7fa);
-      margin: 0;
-      padding: 30px 0;
+      min-height: 100%;
     }
+
+    body {
+      display: block;
+    }
+
+    .wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 30px 15px;
+    }
+
     .container {
       background-color: white;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       max-width: 500px;
-      margin: 0 auto;
+      width: 100%;
       padding: 30px;
-      box-sizing: border-box;
     }
+
     h1 {
       text-align: center;
       color: #2c3e50;
       margin-bottom: 10px;
     }
+
     h2 {
       color: #2c3e50;
       margin-top: 30px;
     }
+
     p {
       font-size: 16px;
       color: #555;
       line-height: 1.5;
     }
+
     label {
       display: block;
       margin-top: 20px;
       color: #333;
       font-weight: bold;
     }
+
     input, select {
       width: 100%;
       padding: 12px;
       margin-top: 8px;
       border: 1px solid #ccc;
       border-radius: 10px;
-      box-sizing: border-box;
       font-size: 16px;
     }
+
     .btn-group {
       display: flex;
       flex-direction: column;
@@ -56,6 +78,7 @@
       gap: 15px;
       margin-top: 20px;
     }
+
     .button, .whatsapp {
       width: 80%;
       text-align: center;
@@ -69,35 +92,57 @@
       transition: background-color 0.3s;
       cursor: pointer;
     }
+
     .button:hover, .whatsapp:hover {
       background-color: #76c977;
     }
+
     .footer {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 13px;
       color: #aaa;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Суперскидка на Kidilo!</h1>
-    <p><strong>Премиальная коляска Kidilo</strong> — ультракомфорт, амортизация, лёгкий вес и стильный дизайн. Идеальна для прогулок в любую погоду.</p>
-    <p><strong>Скидка 40%</strong> действует только до <strong>17 апреля</strong> и на <strong>1 единицу</strong>! Бесплатная доставка по Казахстану.</p>
+  <div class="wrapper">
+    <div class="container">
+      <h1>Суперскидка на Kidilo!</h1>
+      <p><strong>Премиальная коляска Kidilo</strong> — ультракомфорт, амортизация, лёгкий вес и стильный дизайн. Идеальна для прогулок в любую погоду.</p>
+      <p><strong>Скидка 40%</strong> действует только до <strong>17 апреля</strong> и на <strong>1 единицу</strong>! Бесплатная доставка по Казахстану.</p>
 
-    <h2>Забронируй сейчас:</h2>
-    <label>1. Выбери цвет:</label>
-    <select>
-      <option>Зелёный</option>
-      <option>Бежевый</option>
-      <option>Чёрный</option>
-    </select>
+      <h2>Забронируй сейчас:</h2>
+      <label>1. Выбери цвет:</label>
+      <select>
+        <option>Зелёный</option>
+        <option>Бежевый</option>
+        <option>Чёрный</option>
+      </select>
 
-    <label>2. Укажи город:</label>
-    <input type="text" placeholder="Например, Алматы">
+      <label>2. Укажи город:</label>
+      <input type="text" placeholder="Например, Алматы">
 
-    <label>3. Введи номер телефона:</label>
-    <input type="tel" placeholder="+7 777 123 4567">
+      <label>3. Введи номер телефона:</label>
+      <input type="tel" placeholder="+7 777 123 4567">
 
-    <h2>Оплата
+      <h2>Оплата:</h2>
+      <p><strong>Kaspi Gold на имя Аслан С. — +7 777 986 40 76</strong></p>
+
+      <div class="btn-group">
+        <button class="button" onclick="navigator.clipboard.writeText('+7 777 986 40 76')">
+          Скопировать номер Kaspi
+        </button>
+
+        <a class="whatsapp" href="https://wa.me/77779864076" target="_blank">
+          Подтвердить оплату в WhatsApp
+        </a>
+      </div>
+
+      <div class="footer">
+        © 2025 Kidilo. Все права защищены.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
